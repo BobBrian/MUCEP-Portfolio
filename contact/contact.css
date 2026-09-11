@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root { --ink:#101820; --paper:#f5f0e8; --muted:#c9c0b2; --coral:#ff6b4a; --cyan:#9de7df; --line:rgba(245,240,232,.18); }
+* { box-sizing:border-box; }
+body { background:var(--ink); color:var(--paper); font-family:'Space Grotesk',sans-serif; line-height:1.6; margin:0; }
+.topnav { align-items:center; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; padding:20px max(24px,calc((100% - 1180px)/2)); }
+.name { color:var(--paper); font-size:1rem; font-weight:700; text-decoration:none; }
+.nav-links { display:flex; gap:26px; }
+.nav-links a { color:var(--muted); font-family:'DM Mono',monospace; font-size:.72rem; text-decoration:none; text-transform:uppercase; transition:color .2s ease; }
+.nav-links a:hover { color:var(--coral); }
+.header { padding:clamp(70px,12vw,145px) 24px; text-align:center; }
+.header h1 { font-size:clamp(2.5rem,7vw,6.5rem); letter-spacing:-.06em; line-height:.95; margin:0 auto 24px; max-width:1000px; }
+.header p { color:var(--cyan); font-family:'DM Mono',monospace; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; }
+.form-section { background:var(--paper); color:var(--ink); padding:clamp(60px,10vw,130px) 24px; }
+.form-section h2 { font-size:clamp(2.2rem,5vw,4.6rem); letter-spacing:-.05em; line-height:1; margin:0 auto 38px; max-width:760px; }
+form { display:grid; gap:14px; margin:0 auto; max-width:760px; }
+input, textarea { background:transparent; border:0; border-bottom:2px solid #c8c0b4; color:var(--ink); font:inherit; padding:16px 4px; width:100%; }
+textarea { min-height:150px; resize:vertical; }
+input:focus, textarea:focus { border-color:var(--coral); outline:none; }
+button { background:var(--coral); border:0; color:var(--ink); cursor:pointer; font-family:'DM Mono',monospace; font-weight:500; padding:16px 22px; text-transform:uppercase; transition:background .2s ease,transform .2s ease; width:fit-content; }
+button:hover { background:var(--ink); color:var(--paper); transform:translateY(-3px); }
+footer { background:var(--ink); border-top:1px solid var(--line); color:var(--muted); font-family:'DM Mono',monospace; font-size:.7rem; padding:24px; text-align:center; }
+@media (max-width:700px) { .topnav { align-items:flex-start; flex-direction:column; gap:16px; } .nav-links { flex-wrap:wrap; gap:14px; } }
